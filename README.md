@@ -34,11 +34,21 @@ The research investigates how introducing **decision intervals** (intermittent c
 1. Implemented **Deep Q-Networks (DQN)** with discrete control timing.  
 2. Integrated **intermittent control logic** to simulate human-like reaction delays.  
 3. Trained and compared **continuous vs. intermittent** control policies.  
-4. Evaluated metrics such as **training stability**, **reward convergence**, and **control smoothness**.
+4. Evaluated metrics focused on **training efficiency** rather than control accuracy,  
+   including:
+   - **Convergence speed** — time required to reach reward stabilization.  
+   - **Sample efficiency** — number of episodes needed for consistent performance.  
+   - **Computation cost** — training time per episode and overall runtime.  
+   - **Stability under intermittent updates** — observing variance in learning curves.  
 
 ---
 
 ## 🧪 Notes
+The experiments demonstrated that intermittent control can reduce the overall training
+time required for convergence while maintaining comparable reward performance to
+continuously controlled agents — suggesting a potential improvement in computational
+efficiency for resource-constrained RL systems.
+
 - Designed for **academic research** and proof-of-concept evaluation.  
 - Code focuses on demonstrating behavior differences, not production optimization.  
 - Results may vary depending on **TensorFlow/PyTorch** and **CARLA** versions.  
