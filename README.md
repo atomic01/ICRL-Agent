@@ -25,6 +25,9 @@ Two main environments were used for experimentation:
 | `maze_solver_dqn_agent.ipynb` | Baseline DQN maze-solving model (without intermittent control). |
 | `maze_solver_qlearning_agent.ipynb` | Classical Q-Learning version for performance comparison. |
 
+## 📄 Thesis Document
+Full MSc thesis and detailed results are available in the [`/docs`](./docs) folder.
+
 ---
 
 ## ⚙️ Methodology
