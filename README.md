@@ -55,6 +55,25 @@ efficiency for resource-constrained RL systems.
 
 ---
 
+## 📊 Results
+
+Experiments were carried out in two environments — a **maze simulator** and the **CARLA autonomous driving simulator** — to evaluate the impact of **Intermittent Control (IC)** on Deep Q-Network (DQN) performance.
+
+- **Maze environment:**  
+  The IC factor of 6 achieved **16× faster execution** and required **5× fewer episodes** to complete training compared to the baseline DQN, while maintaining identical task performance.  
+  These results demonstrate that IC significantly accelerates learning in environments where training is dominated by agent–environment interactions.
+
+- **CARLA environment:**  
+  The IC factor of 20 resulted in **13.5× fewer network updates** and **22× lower loss**, while maintaining a **90% success rate**.  
+  Because CARLA runs in *real time*, execution time is bound by the simulator’s frame rate.  
+  Consequently, although the algorithm was **computationally more efficient**, total *wall-clock execution time* increased slightly (~25%) due to longer episode durations.  
+  This indicates that IC improves learning efficiency and stability but provides limited runtime gains in real-time simulators.
+
+Overall, intermittent control substantially improved **training efficiency**, **stability**, and **resource utilization** without compromising performance.  
+Its effects were most pronounced in simulated environments where computation time dominates over real-time constraints.
+
+---
+
 ## 🧰 Technologies Used
 Python • TensorFlow • NumPy • OpenAI Gym • CARLA Simulator • Jupyter  
 
